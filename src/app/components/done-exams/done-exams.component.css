@@ -1,0 +1,21 @@
+#container{
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    margin-right: 20px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+   
+}
+
+#scroll{
+    max-height: 600px;
+    overflow-y: auto;
+    min-height: 600px;
+}
+
+h2{
+    font-size: 20px;
+    font-family: 'Ubuntu-Light';
+    color: rgb(74, 58, 255);
+}

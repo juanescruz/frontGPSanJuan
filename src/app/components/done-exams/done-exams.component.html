@@ -1,0 +1,18 @@
+<div id="container">
+
+    <h2>Exams done</h2>
+    <div id="scroll">
+        @for(exam of exams; track exam){
+            
+            @if(exam.calificacion >= 30){
+                <app-exam-passed [exam]="exam"/>
+            }
+            @else{
+                <app-exam-failed [exam]="exam"/>
+            }
+        }
+    </div>
+    
+
+
+</div>

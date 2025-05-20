@@ -1,0 +1,43 @@
+[
+    {
+        "id_exam": 1,
+        "nombre": "PL/SQL",
+        "fecha": "2021-06-01 10:00:00"
+    },{
+        "id_exam": 2,
+        "nombre": "Java",
+        "fecha": "2021-06-02 10:00:00"
+    },{
+        "id_exam": 3,
+        "nombre": "Python",
+        "fecha": "2021-06-03 10:00:00"
+    },{
+        "id_exam": 4,
+        "nombre": "C#",
+        "fecha": "2021-06-04 10:00:00"
+    },{
+        "id_exam": 5,
+        "nombre": "C++",
+        "fecha": "2021-06-05 10:00:00"
+    },{
+        "id_exam": 6,
+        "nombre": "JavaScript",
+        "fecha": "2021-06-06 10:00:00"
+    },{
+        "id_exam": 7,
+        "nombre": "HTML",
+        "fecha": "2021-06-07 10:00:00"
+    },{
+        "id_exam": 8,
+        "nombre": "CSS",
+        "fecha": "2021-06-08 10:00:00"
+    },{
+        "id_exam": 9,
+        "nombre": "PHP",
+        "fecha": "2021-06-09 10:00:00"
+    },{
+        "id_exam": 10,
+        "nombre": "Ruby",
+        "fecha": "2021-06-10 10:00:00"
+    }
+]

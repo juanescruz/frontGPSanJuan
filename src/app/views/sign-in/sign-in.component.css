@@ -1,0 +1,14 @@
+.div-login{
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center;     /* Centrar verticalmente */
+    height: 100vh;  
+    background-color: #ebebeb; 
+}
+
+@media  screen and (max-width: 873px){
+    .div-login{
+        width: 100%;
+    }
+   
+}

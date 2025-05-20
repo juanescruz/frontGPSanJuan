@@ -1,0 +1,16 @@
+<div class="row" id="container">
+  <div class="col-lg-2 col-md-3">
+    <app-left-bar />
+  </div>
+
+  <div class="col-lg-10 col-md-9">
+    <app-nav-bar />
+
+    <app-syllabus-component
+      [teacher]="'jorge ivan trivino'"
+      [title]="'hellow rodl'"
+    ></app-syllabus-component>
+
+    <app-tema-syllabus [unities]="unities" [title]="title"></app-tema-syllabus>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<div>
+  <h4 class="text-center">Pregunta</h4>
+
+  <div class="row">
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Pregunta"
+      [(ngModel)]="pregunta"
+    />
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Respuesta"
+      [(ngModel)]="respuesta"
+    />
+
+    <button class="btn btn-primary" (click)="emparejar()">Agregar</button>
+  </div>
+  <div class="row" id="lista-pareja">
+    <ul>
+      @for(pareja of emparejadas; track pareja){
+      <li>{{ pareja.split("$")[0] + pareja.split("$")[1] }}</li>
+      }
+    </ul>
+  </div>
+
+  <div class="row" id="buttons">
+    <div class="col-6">
+      <button class="btn btn-primary button">Agregar</button>
+    </div>
+    <div class="col-6">
+      <button class="btn btn-primary button">Eliminar respuesta</button>
+    </div>
+  </div>
+</div>

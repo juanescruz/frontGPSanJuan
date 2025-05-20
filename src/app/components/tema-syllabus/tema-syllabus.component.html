@@ -1,0 +1,17 @@
+@for( topics of unities; track topics ){
+<div style="margin-bottom: 30px">
+  <div class="border rounded displaced bold-shadow bg-dark box"></div>
+  <div class="border flex m-2 border-black rounded border-2 bg-purple">
+    <h1 class="fw-bolder fs-7 p-3 pt-1">{{ topics["title"] }}</h1>
+    @for( topic of getObjectKeys(topics); track topic) {
+    <ul>
+      <li>
+        <strong>{{ topic }}:</strong>
+        {{ topics[topic] }}
+      </li>
+    </ul>
+
+    }
+  </div>
+</div>
+}

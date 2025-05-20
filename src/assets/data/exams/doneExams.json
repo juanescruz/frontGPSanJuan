@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "nombre": "Quiz - SELECT sql statement",
+        "calificacion": 43
+    },{
+        "id": 2,
+        "nombre": "Relational model history and concepts",
+        "calificacion": 20
+    },{
+        "id": 3,
+        "nombre": "Fundamental concepts of databases",
+        "calificacion": 50
+    },{
+        "id": 4,
+        "nombre": "Normalization of databases",
+        "calificacion": 37
+    },{
+        "id":5,
+        "nombre": "Quiz - INSERT sql statement",
+        "calificacion": 10
+    }
+
+]

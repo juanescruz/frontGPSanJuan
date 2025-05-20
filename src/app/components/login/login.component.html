@@ -1,0 +1,57 @@
+<div id="container" class="container-fluid">
+
+    <h2 class="text-center">Let's sign you</h2> <br>
+    <h5 class="text-center">Welcome back, you have been missed</h5> <br>
+
+    <form [formGroup]="formulario">
+        <div class="form">
+            <div class="row">
+                <h6 id="email">User id</h6>
+                <input type="text" class="form-control" formControlName="id" placeholder="User id">
+            </div>
+
+            <div class="dropdown" id="combo">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    {{ selectedRole || 'Role' }}
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" (click)="selectRole('Alumno')">Alumno</a></li>
+                    <li><a class="dropdown-item" (click)="selectRole('Docente')">Docente</a></li>
+                </ul>
+            </div>
+
+
+        </div>
+    </form>
+    <a class="clickable" (click)="navigate('/forgot-password')">
+        <h6 class="text-end" >Forgot password?</h6>
+    </a> <br>
+
+
+    <button class="btn btn-primary " (click)="signIn()">Sign in</button> <br> <br>
+    <div class="d-flex align-items-center">
+        <div class="flex-grow-1">
+            <hr>
+        </div>
+        <span class="mx-2 text-muted">or</span>
+        <div class="flex-grow-1">
+            <hr>
+        </div>
+    </div>
+    <div class="icons row align-items-center justify-content-center">
+
+        <div class="col-auto">
+            <i class="bi bi-google align-items-center justify-content-center"></i>
+        </div>
+        <div class="col-auto">
+            <i class="bi bi-facebook align-items-center justify-content-center"></i>
+        </div>
+        <div class="col-auto">
+            <i class="bi bi-apple align-items-center justify-content-center"></i>
+        </div>
+
+    </div>
+    <h6 class="register text-center"> Don't have an account? <span id="span"> register now</span></h6>
+
+</div>

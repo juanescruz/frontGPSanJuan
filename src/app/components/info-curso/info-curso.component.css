@@ -1,0 +1,62 @@
+.rounded-card {
+    border-radius: 20px;
+}
+
+.subtitulo {
+    color: gray;
+    font-size: larger;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+td {
+    font-weight: 500;
+
+}
+
+table.rounded-corners {
+    border-spacing: 0;
+    border-collapse: separate;
+    border-radius: 10px;
+    border: 1px solid;
+    background-color: #F1F0FF;
+}
+
+div.rounded-corners {
+    border-spacing: 0;
+    border-collapse: separate;
+    border-radius: 10px;
+    border: 1px solid;
+    background-color: #F1F0FF;
+}
+
+table.rounded-corners th:not(:last-child),
+table.rounded-corners td:not(:last-child) {
+    border-right: 1px solid black;
+}
+
+
+table.rounded-corners>thead>tr:not(:last-child)>th,
+table.rounded-corners>thead>tr:not(:last-child)>td,
+table.rounded-corners>tbody>tr:not(:last-child)>th,
+table.rounded-corners>tbody>tr:not(:last-child)>td,
+table.rounded-corners>tfoot>tr:not(:last-child)>th,
+table.rounded-corners>tfoot>tr:not(:last-child)>td,
+table.rounded-corners>tr:not(:last-child)>td,
+table.rounded-corners>tr:not(:last-child)>th,
+table.rounded-corners>thead:not(:last-child),
+table.rounded-corners>tbody:not(:last-child),
+table.rounded-corners>tfoot:not(:last-child) {
+    border-bottom: 1px solid black;
+}
+
+.custom-height {
+    height: 45px;
+}
+
+.present-exam-btn {
+    border: solid 2px gray;
+    background-color: #4A3AFF;
+    color: white;
+    font-weight: 800;
+}

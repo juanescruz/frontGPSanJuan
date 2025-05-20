@@ -1,0 +1,49 @@
+#container{
+    height: 100vh;
+    width: 15vw;
+    position: fixed;
+    background-color: rgb(74, 58, 255);
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    padding-top: 30px;
+}
+h2{
+    font-size: 2em;
+    font-family: 'Ubuntu-Bold';
+}
+
+h4{
+    margin-top: 40px;
+    font-size: 17px;
+    font-family: 'Ubuntu-Light';
+    cursor: pointer;
+}
+
+.elements{
+    margin-bottom: 30px;
+}
+
+#logout{
+    margin-bottom: 80px;
+    font-size: 17px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-family: 'Ubuntu-Light';
+    cursor: pointer;
+}
+
+
+h4:hover{
+    color: white;
+    box-shadow: inset;
+}
+
+#logout:hover{
+
+    color: white;
+    box-shadow: inset;
+
+}
+

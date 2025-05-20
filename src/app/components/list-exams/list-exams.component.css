@@ -1,0 +1,23 @@
+p{
+    font-size: 20px;
+    font-weight: 100;
+    
+}
+
+.row{
+    border-bottom: 1px solid #838383;
+}
+
+button{
+    background-color: white;
+    color: rgb(74, 58, 255);
+}
+
+.items{
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+#add-exam{
+    margin-top: 80px;
+}

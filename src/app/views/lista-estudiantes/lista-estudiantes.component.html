@@ -1,0 +1,39 @@
+<div class="row">
+
+    <div class="col-lg-2 col-md-3">
+        <app-left-bar/>
+    </div>
+    <div class="col-lg-10 col-md-9">
+        <app-nav-bar/>
+        <h1 class="text-center">Administración de TI</h1>
+        <div class="table">
+
+            <div class="row">
+                <div class="col-4">
+                    <p class="text-center title">Name</p>
+                </div>
+                <div class="col-4">
+                    <p class="text-center title">Last name</p>
+                </div>
+                <div class="col-4">
+                    <p class="text-center title">Number ID</p>
+                </div>
+            </div>
+
+            @for(estudiante of estudiantes; track estudiante){
+                <div class="row component">
+                    <div class="col-4">
+                        <p class="text-center">{{estudiante.name}}</p>
+                    </div>
+                    <div class="col-4">
+                        <p class="text-center">{{estudiante.lastName}}</p>
+                    </div>
+                    <div class="col-4">
+                        <p class="text-center">{{estudiante.ID}}</p>
+                    </div>
+                </div>
+            }
+            
+        </div>
+    </div>
+</div>

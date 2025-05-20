@@ -1,0 +1,24 @@
+<div id="container">
+  <h5 class="text-center">Pregunta</h5>
+  <div class="row">
+    <div class="col-9">
+      <input type="text" class="form-control" [(ngModel)]="pregunta" />
+
+      <div class="row">
+        <div class="col-6">
+          <button class="btn btn-primary">Agregar respuesta</button>
+        </div>
+        <div class="col-6">
+          <button class="btn btn-primary">Eliminar respuesta</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="col-12">
+        <app-pregunta-unica>
+          <input type="radio" />
+        </app-pregunta-unica>
+      </div>
+    </div>
+  </div>
+</div>

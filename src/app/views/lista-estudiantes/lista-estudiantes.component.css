@@ -1,0 +1,14 @@
+.table{
+    margin: 50px;
+    max-height: 800px;
+    overflow-y: auto;
+}
+
+.title{
+    font-weight: 800;
+}
+
+.component{
+    border: 1px solid #000;
+    border-radius: 10px;
+}

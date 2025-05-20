@@ -1,0 +1,27 @@
+<div class="container mt-5 gray">
+    <div class="card rounded-card content-align-center">
+        <div class=" card-body justify-content-center">
+            <h1 class="card-title ">{{title}}</h1>
+            <p class="subtitulo">{{subtitle}}</p>
+            <h2 class="text-bold">Info</h2>
+
+            <table class="table rounded-corners ">
+                @for( info of getObjectKeys(course_data); track info) {
+                <tr>
+                    <td class="px-3 custom-height">{{info}}</td>
+                    <td class="px-3 custom-height">{{course_data[info]}}</td>
+                </tr>
+                }
+            </table>
+            <h2 class="text-bold">Description</h2>
+
+            <div class="py-4 px-2 my-2 rounded-corners ">
+                {{description}}
+            </div>
+
+            <div class="d-flex justify-content-center align-items-center w-100 my-4">
+                <a href="#" class="btn present-exam-btn shadow-lg">Present exam</a>
+            </div>
+        </div>
+    </div>
+</div>

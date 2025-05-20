@@ -1,0 +1,24 @@
+<div class="row">
+
+    <div class="col-lg-2 col-md-3">
+        <app-left-bar/>
+    </div>
+    <div class="col-lg-10 col-md-9">
+        <app-nav-bar/>
+
+        @if(true){
+            <h1 class="text-start"> Cursos </h1>
+        <p>Bienvenido de vuelta, {{nombre}}</p>
+        
+        <div class="d-flex flex-row flex-wrap" id="items-courses">
+            @for(course of courses; track course){
+                <div class="col-lg-3 col-md-3 col-sm-9" style="width: 290px">
+                    <app-course [course]="course"  ></app-course>
+                </div>
+            } 
+        </div>
+        }@else {
+            <app-pending-exam/>
+        } 
+    </div>
+</div>

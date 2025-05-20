@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Ubuntu-Medium';
+    src: url('../assets/fonts/Ubuntu/Ubuntu-Medium.ttf') format('woff');
+}
+
+@font-face {
+    font-family: 'Ubuntu-Light';
+    src: url('../assets/fonts/Ubuntu/Ubuntu-Light.ttf') format('woff');
+}
+
+@font-face {
+    font-family: 'Ubuntu-Bold';
+    src: url('../assets/fonts/Ubuntu/Ubuntu-Bold.ttf') format('woff');
+}

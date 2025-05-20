@@ -1,0 +1,22 @@
+#aux {
+  margin : 10em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+}
+
+#my-container {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+  background-color: #505dff;
+  border-radius: 15px;
+}
+
+#msg {
+  color: white;
+  font-size: 20px;
+  margin-left: 10px;
+}

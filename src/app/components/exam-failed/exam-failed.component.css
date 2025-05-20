@@ -1,0 +1,35 @@
+#container{
+    margin-top: 20px;
+    border: 1px solid rgb(160, 160, 160);
+    border-radius: 10px;
+    min-height: 6ch;
+    margin-left: 30px;
+    margin-right: 30px;
+    background-color: rgb(255, 211, 211);
+}
+
+i{
+    color:black;
+}
+
+h3{
+    font-size: 12px;
+    font-family: 'Ubuntu-Bold';
+}
+h2{
+    font-size: 12px;
+    font-family: 'Ubuntu-Light';
+    border-left: 1px solid rgb(254, 48, 48);
+    border-right: 1px solid rgb(254, 48, 48); 
+}
+button{
+    width: 70%;
+    height: 70%;
+    background-color: RGB(108, 95, 255);
+    box-shadow: 0px 3px 10px 0px rgb(105, 93, 219);
+    font-size: 12px;
+}
+
+h2{
+    color: RGB(108, 95, 255);
+}

@@ -1,0 +1,23 @@
+#pregunta-text{
+    min-height: 200px;
+}
+
+#opciones{
+
+    margin-top: 60px;
+}
+
+#container{
+    margin-top: 20px;
+}
+
+#buttons{
+   margin-top: 60px;
+}
+
+button{
+    background-color: white;
+    color: rgb(0, 68, 255);
+    margin-top: 50px;
+    margin-left: 80px;
+}

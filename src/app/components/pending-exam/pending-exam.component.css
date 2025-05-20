@@ -1,0 +1,12 @@
+.pane{
+    margin-top: 80px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f8f9fa;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-right: 60px;
+    max-height: 700px;
+    overflow-y: auto;
+
+}

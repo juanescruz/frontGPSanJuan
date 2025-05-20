@@ -1,0 +1,38 @@
+[
+    {
+        "id_curso" : 1,
+        "nombre": "Bases de datos [03D]",
+        "descripcion": "Aprende a manejar bases de datos con SQL",
+        "imagen": "/../../assets/data/home/images/dabases.png"
+    },
+    {
+        "id_curso" : 2,
+        "nombre": "Adminstración de TI [01D]",
+        "descripcion": "Aprende administración de TI con los mejores profesores",
+        "imagen": "/../../assets/data/home/images/Linux.jpg" 
+    },
+    {
+        "id_curso" : 3,
+        "nombre": "Ingeniería de software [01D]",
+        "descripcion": "Aprende ingeniería de software con los mejores profesores",
+        "imagen": "/../../assets/data/home/images/software.jpg" 
+    },
+    {
+        "id_curso" : 4,
+        "nombre": "Cálculo integral [02D]",
+        "descripcion": "Aprende cálculo integral con los mejores profesores",
+        "imagen": "/../../assets/data/home/images/math.jpg" 
+    },
+    {
+        "id_curso" : 4,
+        "nombre": "Cálculo integral [02D]",
+        "descripcion": "Aprende cálculo integral con los mejores profesores",
+        "imagen": "/../../assets/data/home/images/math.jpg" 
+    },
+    {
+        "id_curso" : 4,
+        "nombre": "Cálculo integral [02D]",
+        "descripcion": "Aprende cálculo integral con los mejores profesores",
+        "imagen": "/../../assets/data/home/images/math.jpg" 
+    }
+]

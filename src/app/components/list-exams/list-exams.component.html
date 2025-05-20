@@ -1,0 +1,31 @@
+<div class="row">
+
+    <div class="col-lg-2">
+        <p class="text-center"></p>
+    </div>
+    <div class="col-lg-2">
+        <p class="text-center">Exams</p>
+    </div>
+    <div class="col-lg-2">
+        <p class="text-center">Value</p>
+    </div>
+    <div class="col-lg-2">
+        <p class="text-center">Questions</p>
+    </div>
+    <div class="col-lg-2">
+        <p class="text-center">Limit time</p>
+    </div>
+    <div class="col-lg-2">
+        <p>Actions</p>
+    </div>
+
+</div>
+<div class="items">
+    @for(item of items; track item){
+        <app-item-docente-exam [item]="item"/>
+    }
+</div>
+
+<div class="d-flex justify-content-center align-items-center">
+    <button class="btn btn-primary" id="add-exam"> + Add exam</button>
+</div>

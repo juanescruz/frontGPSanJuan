@@ -1,0 +1,105 @@
+<div class="bg border rounded d-flex justify-content-end z-index">
+  <app-nav-bar [style]="'white-font'"></app-nav-bar>
+</div>
+
+<div class="flex-row d-flex">
+  <div style="width: 80%">
+    <h1 class="m-4 p-4">{{ exam_title }}</h1>
+    <div class="m-5">
+      @for( question of questions; track question){
+      <app-card>
+        @if( question.type == 'single-choice' ){
+        <app-single-choice-question
+          [statement]="question.statement"
+          [choices]="question.choices"
+          [correct_option]="question.correct_option"
+          [points]="question.points"
+          [gid]="question.statement"
+          [question_number]="$index"
+          (valueChange)="changeGrade($event)"
+        ></app-single-choice-question>
+        } @if( question.type == 'multiple-choice' ){
+        <app-multiple-choice-question
+          [statement]="question.statement"
+          [choices]="question.choices"
+          [points]="question.points"
+          [gid]="question.statement"
+          [correct_option]="question.correct_option"
+          [question_number]="$index"
+          (valueChange)="changeGrade($event)"
+        ></app-multiple-choice-question>
+        } @if( question.type == 'multipart' ){
+        <app-multipart-question
+          [statement]="question.statement"
+          [subquestions]="question.subquestions"
+        ></app-multipart-question>
+        } @if( question.type == 'true_false' ){
+        <app-verdadero-falso
+          [questions]="question"
+          [question_number]="$index"
+          (valueChange)="changeGrade($event)"
+        ></app-verdadero-falso>
+        }
+      </app-card>
+      }
+    </div>
+  </div>
+
+  <div style="width: 50%; height: 60%; margin-top: 9%">
+    <app-card>
+      <div class="text-center">Time left</div>
+      <div class="m-3 justify-content-center align-items-center d-flex">
+        <div class="timer-center" style="font-size: 15px">{{ timeString }}</div>
+        <div class="timer-border" style="{{ gradesStyle }}"></div>
+      </div>
+    </app-card>
+
+    <app-card>
+      <div class="container">
+        <div class="row">
+          @for( check of checked; track $index){
+          <div class="col-md-3">
+            @if( check){
+            <app-card
+              [style]="'width: 100%; height: 50px'"
+              [class]="
+                'border justify-content-center rounded m-2 text-center align-items-center pt-2'
+              "
+              >{{ $index + 1 }}</app-card
+            >
+            } @else {
+
+            <app-card
+              [style]="'width: 100%; background-color: gray; height: 50px'"
+              [class]="
+                'border justify-content-center rounded m-2 text-center align-items-center pt-2'
+              "
+              >{{ $index + 1 }}
+            </app-card>
+
+            }
+          </div>
+          }
+        </div>
+      </div>
+    </app-card>
+  </div>
+</div>
+<div
+  class="d-flex justify-content-center align-content-center pt-2"
+  style="
+    position: fixed;
+    bottom: 1px;
+    background-color: whitesmoke;
+    width: 100%;
+    height: 7%;
+  "
+>
+  <button
+    class="border rounded text-white fw-bold"
+    style="background-color: #4a3aff; height: 30px"
+    (click)="submitExam()"
+  >
+    submit
+  </button>
+</div>

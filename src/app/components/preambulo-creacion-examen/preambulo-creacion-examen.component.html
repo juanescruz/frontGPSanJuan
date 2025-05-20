@@ -1,0 +1,75 @@
+<div id="outer">
+<h2>Crear examen</h2>
+
+<form>
+  <div class="row">
+    <label  class="col-2"  for="curso">Curso:</label>
+    <input  class="col -8" type="text" id="curso" value="Bases de datos" >
+  </div>
+
+  <div class="row">
+    <label class="col-2" for="nombre">Nombre del examen:</label>
+    <input class="col-8" type="text" id="nombre" value="Disparadores PLSQL">
+  </div>
+
+  <div class="row">
+    <label    class="col-2"  for="descripcion">Descripción:</label>
+    <textarea class="col -8"  id="descripcion">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</textarea>
+  </div>
+
+  <div class="row">
+    <label  class="col-2"  for="duracion">Cantidad máxima de minutos del examen:</label>
+    <input  class="col-3" type="number" id="duracion" placeholder="Type a number...">
+  </div>
+
+  <div class="row ">
+    <label  class="col-2"  for="cantidad">Cantidad preguntas aleatorias:</label>
+    <input  class="col-3" type="number" id="cantidad" placeholder="Type a number...">
+  </div>
+
+  <div class="row">
+    <label class="col-2"  for="porcentaje">Porcentaje del examen en el grupo:</label>
+    <input class="col-3" type="number" id="porcentaje" placeholder="Type a number...">
+    <p class="row" id="alert" >(Porcentaje actual acumulado del grupo es: 50%)</p>
+  </div>
+
+  <div class="row">
+    <label class="col-2"  for="fecha-inicio">Fecha inicio:</label>
+    <input class="col-3" type="datetime-local" id="fecha-inicio" value="2024-05-25T08:30">
+  </div>
+
+  <div>
+    <label class="col-2"  for="fecha-limite">Fecha límite:</label>
+    <input class="col-3" type="datetime-local" id="fecha-limite" value="2024-05-25T08:30">
+  </div>
+
+  <div>
+    <label class="col-2"  for="porcentaje-aprobatorio">Porcentaje aprobatorio:</label>
+    <input class="col-3" type="number" min="0" max="100" id="porcentaje-aprobatorio" placeholder="Type a number...">
+  </div>
+
+
+
+  <div class="row">
+    <label class="row" for="pet-select">Selecciona un tema para el examen:</label>
+
+    <select class="col-3" name="pets" id="pet-select">
+
+      <!-- TODO -->
+      <option value="">Elige aquí tu tema</option>
+      <option value="dog">Dog</option>
+      <option value="cat">Cat</option>
+      <option value="hamster">Hamster</option>
+      <option value="parrot">Parrot</option>
+      <option value="spider">Spider</option>
+      <option value="goldfish">Goldfish</option>
+    </select>
+
+  </div>
+
+  <br>
+
+  <button type="submit"> Guardar Examen </button>
+</form>
+
+</div>

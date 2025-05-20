@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'Ubuntu-Medium';
+  src: url('../../../assets/fonts/Ubuntu/Ubuntu-Medium.ttf') format('woff');
+}
+
+* {
+  font-family: 'Ubuntu-Medium', serif;
+}
+
+
+label, input {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#outer {
+  margin: 1%;
+  padding: 2%;
+  border : 2px solid #979797;
+  border-radius: 20px;
+}
+
+#alert {
+  font-size: small;
+  color : #4a3aff;
+}
+

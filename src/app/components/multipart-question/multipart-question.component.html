@@ -1,0 +1,27 @@
+<p class="m-3">{{ statement }}</p>
+
+@for( question of subquestions; track question) {
+<app-card>
+  @if( question.type == 'single-choice' ){
+  <app-single-choice-question
+    [statement]="question.statement"
+    [choices]="question.choices"
+    [points]="question.points"
+    [gid]="question.statement"
+    [correct_option]="question.correct_option"
+    [question_number]="$index"
+    (valueChange)="emitGrade($event)"
+  ></app-single-choice-question>
+  } @if( question.type == 'multiple-choice' ){
+  <app-multiple-choice-question
+    [statement]="question.statement"
+    [choices]="question.choices"
+    [points]="question.points"
+    [gid]="question.statement"
+    [correct_option]="question.correct_option"
+    [question_number]="$index"
+    (valueChange)="emitGrade($event)"
+  ></app-multiple-choice-question>
+  }
+</app-card>
+}

@@ -1,0 +1,12 @@
+<div id="container">
+
+    <h2>Pending exams</h2>
+    <div id="scroll">
+        @for(exam of exams; track exam){
+            <app-pending-exam-item [exam]="exam"/>
+        }
+    </div>
+    
+
+
+</div>

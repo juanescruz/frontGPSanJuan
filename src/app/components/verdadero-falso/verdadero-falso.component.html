@@ -1,0 +1,16 @@
+<p>Responda VERDADERO o FALSO para las siguientes preguntas</p>
+
+@for( question of questions.questions; track question){
+<p>{{ question }}</p>
+<select
+  class="col-3"
+  (change)="onSelectionChange($event, $index)"
+  class="form-select form-select-sm mb-4"
+  style="width: 40%"
+>
+  <option value="" selected disabled hidden></option>
+  <option value="VERDADERO">VERDADERO</option>
+  <option value="FALSO">FALSO</option>
+</select>
+
+}

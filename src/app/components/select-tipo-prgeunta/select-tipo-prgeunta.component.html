@@ -1,0 +1,23 @@
+<div class="justify-content-center">
+  <div id="container" class="d-flex flex-column align-items-center">
+    <h3 class="text-center">Selecciona el tipo de pregunta</h3>
+    <select
+      class="form-select"
+      [(ngModel)]="tipoPregunta"
+      (change)="onChange($event)"
+    >
+      <option *ngFor="let tipo of tiposPregunta; let i = index" [value]="i + 1">
+        {{ tipo }}
+      </option>
+    </select>
+    @if(valuePregunta == 1){
+    <app-unique-answer-question />
+    } @if(valuePregunta == 2){
+    <app-multiple-choice-question />
+    } @if(valuePregunta == 3){
+    <app-tru-false-question />
+    } @if(valuePregunta == 4){
+    <app-matching-question />
+    }
+  </div>
+</div>

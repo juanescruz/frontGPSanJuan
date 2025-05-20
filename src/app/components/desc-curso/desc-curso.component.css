@@ -1,0 +1,14 @@
+button{
+    background-color: white;
+    color: rgb(74, 58, 255);
+}
+
+p{
+    font-size: 20px;
+    font-family: 'Ubuntu-Light';
+    color: rgb(130, 130, 130);
+}
+
+.app-course{
+    margin-right: 30px;
+}

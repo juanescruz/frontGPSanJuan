@@ -1,0 +1,15 @@
+<p>{{ statement }}</p>
+
+@for( choice of choices; track choice) {
+<input
+  (change)="onCheckboxChange($event, choice)"
+  class="m-1"
+  type="checkbox"
+  id="{{ choice }}"
+  name="{{ gid }}"
+  value="{{ choice }}"
+/>
+<label class="m-1" for="{{ choice }}">{{ choice }}</label
+><br />
+
+}
