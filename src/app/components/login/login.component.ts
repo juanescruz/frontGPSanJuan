@@ -65,7 +65,7 @@ export class LoginComponent {
           } else {
             
             this.router.navigate(['/home-docente']);
-            this.activeUser.setRol('profesor');
+            this.activeUser.setRol('docente');
            
 
             

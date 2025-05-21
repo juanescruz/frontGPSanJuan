@@ -41,8 +41,8 @@ export class HomeDocenteComponent {
         this.docenteService.getName(this.userActivo.getId(), this.userActivo.getRol()).subscribe(
             (data) => {
                 if(data.error == false) {
-                    console.log("Obtener nombre: "+data);
-                    this.nombre = data.mensaje;
+                    console.log("Obtener nombre: "+data.respuesta);
+                    this.nombre = data.respuesta;
                 }
             },
             (error) => {
@@ -57,6 +57,7 @@ export class HomeDocenteComponent {
             (data) => {
                 if(data.error == false) {
                     data.respuesta.forEach((element: Course) => {
+                        console.log(element.nombre_curso)
                         this.courses?.push(element);
                     });
                 }
