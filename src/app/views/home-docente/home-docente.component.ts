@@ -49,13 +49,14 @@ export class HomeDocenteComponent {
                 console.log(error);
             }
         );
-    }
+    }   
 
 
     loadCourses() {
         this.docenteService.getCourses(this.userActivo.getId(), "docente").subscribe(
             (data) => {
                 if(data.error == false) {
+                    console.log(data.respuesta)
                     data.respuesta.forEach((element: Course) => {
                         console.log(element.nombre_curso)
                         this.courses?.push(element);

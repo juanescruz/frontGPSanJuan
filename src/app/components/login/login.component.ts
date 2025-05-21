@@ -57,7 +57,7 @@ export class LoginComponent {
           this.activeUser.setId(id); 
         
 
-          if( user.getRol() === 'Alumno' ) {
+          if( user.getRol() === 'alumno' ) {
 
             this.router.navigate(['/home']);
             this.activeUser.setRol('estudiante');
