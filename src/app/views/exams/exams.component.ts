@@ -50,7 +50,7 @@ export class ExamsComponent implements OnInit {
     
     this.estudianteService.getExamsPendientes(exam).subscribe(
       (data) => {
-        console.log("Exams pendientes");
+        console.log("Exams pendientes para ID: " + this.userActivo.getId() + " y grupo: " + this.courseService.getCourse().id_grupo);
         this.examenesPendientes = data.respuesta;
         console.log(this.examenesPendientes);
       },
