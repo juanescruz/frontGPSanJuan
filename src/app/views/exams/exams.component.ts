@@ -28,6 +28,7 @@ export class ExamsComponent implements OnInit {
   examenesHechos!: ExamDone[];
   examenesPendientes!: ExamDue[];
   nombreCurso!: string;
+  nombreDocente!: string;
 
 
   constructor(private router: ActivatedRoute,
@@ -37,12 +38,12 @@ export class ExamsComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-
+    this.nombreDocente
     this.nombreCurso = this.courseService.getCourse().nombre_curso;
     this.loadExamsPendientes();
     this.loadExamsHechos();
   }
-
+  
   loadExamsPendientes() {
 
     let exam = new ExamDTO(this.userActivo.getId(), this.courseService.getCourse().id_grupo);

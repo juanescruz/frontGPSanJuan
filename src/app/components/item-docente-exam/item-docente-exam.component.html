@@ -1,26 +1,28 @@
-<div class="row" id="container">
+<div *ngIf="item" class="row item-row align-items-center py-2 border-bottom" id="container">
     <div class="col-lg-2">
-        <p class="text-center">{{item.id}}</p>
-    </div> 
-    <div class="col-lg-2">
-        <p class="text-center">{{item.name}}</p>
+        <p class="text-center">{{ item.tema || item.descripcion || item.id_examen }}</p> 
     </div>
     <div class="col-lg-2">
-        <p class="text-center">{{item.value}}</p>
-    </div>
+        <p class="text-center">{{ item.nombre }}</p> </div>
     <div class="col-lg-2">
-        <p class="text-center">{{item.question}}</p>
-    </div>
+        <p class="text-center">{{ item.porcentaje_curso }}%</p> </div>
     <div class="col-lg-2">
-        <p class="text-center">{{item.limit_time}}</p>
-    </div>
+        <p class="text-center">{{ item.numero_preguntas }}</p> </div>
     <div class="col-lg-2">
-        <div class="row">
-            <div class="col-6">
-                <button class="btn btn-primary"> Edit</button>
+        <p class="text-center">{{ item.tiempo_maximo }} min</p> </div>
+    <div class="col-lg-2">
+        <div class="row gx-1"> <div class="col-auto"> <button class="btn btn-primary btn-sm" (click)="editarExamen(item.id_examen)" title="Editar">
+                    <i class="bi bi-pencil-fill"></i> </button>
             </div>
-            <div class="col-6">
-                <button class="btn btn-danger"> Delete</button>
+            <div class="col-auto">
+                <button class="btn btn-danger btn-sm" (click)="eliminarExamen(item.id_examen)" title="Eliminar">
+                    <i class="bi bi-trash-fill"></i> </button>
+            </div>
+            <div class="col-auto">
+                 <button class="btn btn-info btn-sm" (click)="verResultados(item.id_examen)" title="Ver Resultados">
+                    <i class="bi bi-eye-fill"></i>
+                 </button>
             </div>
         </div>
+    </div>
 </div>

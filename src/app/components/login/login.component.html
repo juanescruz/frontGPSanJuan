@@ -1,19 +1,19 @@
 <div id="container" class="container-fluid">
 
-    <h2 class="text-center">Let's sign you</h2> <br>
-    <h5 class="text-center">Welcome back, you have been missed</h5> <br>
+    <h2 class="text-center">Iniciar sesión</h2> <br>
+    <h5 class="text-center">Bienvenido de vuelta, te hemos extrañado.</h5> <br>
 
     <form [formGroup]="formulario">
         <div class="form">
             <div class="row">
-                <h6 id="email">User id</h6>
-                <input type="text" class="form-control" formControlName="id" placeholder="User id">
+                <h6 id="email">ID Usuario</h6>
+                <input type="text" class="form-control" formControlName="id" placeholder="ID Usuario">
             </div>
 
             <div class="dropdown" id="combo">
                 <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
                     aria-expanded="false">
-                    {{ selectedRole || 'Role' }}
+                    {{ selectedRole || 'Rol' }}
                 </button>
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" (click)="selectRole('Alumno')">Alumno</a></li>
@@ -25,16 +25,16 @@
         </div>
     </form>
     <a class="clickable" (click)="navigate('/forgot-password')">
-        <h6 class="text-end" >Forgot password?</h6>
+        <h6 class="text-end" >¿Olvidaste tu contraseña?</h6>
     </a> <br>
 
 
-    <button class="btn btn-primary " (click)="signIn()">Sign in</button> <br> <br>
+    <button class="btn btn-primary " (click)="signIn()">Iniciar Sesión</button> <br> <br>
     <div class="d-flex align-items-center">
         <div class="flex-grow-1">
             <hr>
         </div>
-        <span class="mx-2 text-muted">or</span>
+        <span class="mx-2 text-muted">o</span>
         <div class="flex-grow-1">
             <hr>
         </div>
@@ -52,6 +52,6 @@
         </div>
 
     </div>
-    <h6 class="register text-center"> Don't have an account? <span id="span"> register now</span></h6>
+    <h6 class="register text-center"> ¿No tienes una cuenta?<span id="span"> Regístrate ahora</span></h6>
 
 </div>
