@@ -1,0 +1,39 @@
+<div class="mt-4 p-3 border rounded bg-light">
+  <div class="d-flex justify-content-between align-items-center">
+    <h4>Crear Nueva Pregunta para el Banco</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="cancelar()"></button>
+  </div>
+  <hr>
+  <form [formGroup]="nuevaPreguntaForm" (ngSubmit)="guardarNuevaPregunta()">
+    <div class="mb-3">
+      <label for="enunciadoPregunta" class="form-label">Enunciado <span class="text-danger">*</span></label>
+      <textarea id="enunciadoPregunta" class="form-control" formControlName="enunciado" rows="3"></textarea>
+      </div>
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <label for="tipoPregunta" class="form-label">Tipo <span class="text-danger">*</span></label>
+        <select id="tipoPregunta" class="form-select" formControlName="tipo_pregunta">
+          <option *ngFor="let tipo of tiposPregunta" [value]="tipo.valor">{{ tipo.texto }}</option>
+        </select>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="idTemaPregunta" class="form-label">Tema <span class="text-danger">*</span></label>
+        <select id="idTemaPregunta" class="form-select" formControlName="id_tema">
+          <option [ngValue]="null" disabled>Seleccione un tema</option>
+          <option *ngFor="let tema of temasDisponibles" [value]="tema.id_tema">{{ tema.titulo }}</option>
+        </select>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="esPublicaPregunta" class="form-label">¿Es Pública? <span class="text-danger">*</span></label>
+        <select id="esPublicaPregunta" class="form-select" formControlName="es_publica">
+          <option value="S">Sí</option>
+          <option value="N" selected>No</option>
+        </select>
+      </div>
+    </div>
+    <div class="mt-2">
+      <button type="submit" class="btn btn-success me-2" [disabled]="nuevaPreguntaForm.invalid">Guardar Pregunta en Banco</button>
+      <button type="button" class="btn btn-secondary" (click)="cancelar()">Cancelar</button>
+    </div>
+  </form>
+</div>

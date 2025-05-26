@@ -1,0 +1,113 @@
+<div class="container-fluid vh-100 d-flex flex-column p-0"> <div class="row g-0 flex-grow-1"> <div class="col-lg-2 col-md-3 sidebar-container"> <app-left-bar></app-left-bar> </div>
+
+    <div class="col-lg-10 col-md-9 content-container p-4"> <h2>Crear Nuevo Examen</h2>
+      <hr> <form [formGroup]="examenForm" (ngSubmit)="onSubmitExamen()">
+        <h4>Datos Generales</h4>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="nombreExamen" class="form-label">Nombre del Examen</label>
+            <input type="text" id="nombreExamen" class="form-control" formControlName="nombre">
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="descripcionExamen" class="form-label">Descripción</label>
+            <textarea id="descripcionExamen" class="form-control" formControlName="descripcion"></textarea>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="temaExamen" class="form-label">Tema del Examen</label>
+            <select id="temaExamen" class="form-select" formControlName="id_tema">
+              <option [ngValue]="null" disabled>Seleccione un tema</option>
+              <option *ngFor="let tema of temas" [value]="tema.id_tema">{{ tema.titulo }}</option>
+            </select>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="grupoExamen" class="form-label">Grupo</label>
+            <select id="grupoExamen" class="form-select" formControlName="id_grupo">
+              <option [ngValue]="null" disabled>Seleccione un grupo</option>
+              </select>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-3"> <label for="tiempoMax" class="form-label">Tiempo Máx. (min)</label>
+                <input type="number" id="tiempoMax" class="form-control" formControlName="tiempo_max">
+            </div>
+            <div class="col-md-4 mb-3"> <label for="porcentajeCurso" class="form-label">% del Curso</label>
+                <input type="number" id="porcentajeCurso" class="form-control" formControlName="porcentaje_curso">
+            </div>
+            <div class="col-md-4 mb-3"> <label for="porcentajeAprobatorio" class="form-label">% Aprobatorio</label>
+                <input type="number" id="porcentajeAprobatorio" class="form-control" formControlName="porcentaje_aprobatorio">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="fechaInicio" class="form-label">Fecha y Hora de Inicio</label>
+                <input type="datetime-local" id="fechaInicio" class="form-control" formControlName="fecha_inicio">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="fechaFin" class="form-label">Fecha y Hora de Fin</label>
+                <input type="datetime-local" id="fechaFin" class="form-control" formControlName="fecha_fin">
+            </div>
+        </div>
+    
+        <hr>
+        <h4>Configuración de Preguntas</h4>
+        <div class="mb-3">
+          <label for="modoExamen" class="form-label">Modo de Selección de Preguntas</label>
+          <select id="modoExamen" class="form-select" formControlName="modo">
+            <option value="manual">Manual (Seleccionar del banco)</option>
+            <option value="automatico_total">Automático Total (Balanceado)</option>
+          </select>
+        </div>
+    
+        <div *ngIf="examenForm.get('modo')?.value !== 'manual'" class="row">
+          <p>Defina el número total de preguntas y el balance de dificultad:</p>
+          <div class="col-md-3 mb-3">
+              <label>Nº Preguntas (Auto)</label>
+              <input type="number" class="form-control" formControlName="numero_preguntas">
+          </div>
+          <div class="col-md-3 mb-3">
+            <label>% Fácil</label>
+            <input type="number" class="form-control" formControlName="pct_facil">
+          </div>
+          <div class="col-md-3 mb-3">
+            <label>% Media</label>
+            <input type="number" class="form-control" formControlName="pct_media">
+          </div>
+          <div class="col-md-3 mb-3">
+            <label>% Difícil</label>
+            <input type="number" class="form-control" formControlName="pct_dificil">
+          </div>
+        </div>
+    
+        <div *ngIf="examenForm.get('modo')?.value === 'manual'">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <h5>Banco de Preguntas</h5>
+            <button type="button" class="btn btn-sm btn-success" (click)="toggleFormularioNuevaPregunta()">
+              <i class="bi bi-plus-circle"></i> Crear Nueva Pregunta
+            </button>
+          </div>
+          
+          <app-banco-preguntas 
+            [idTema]="temaSeleccionadoParaBanco"
+            (preguntasSeleccionadasChange)="onPreguntasSeleccionadasChange($event)">
+          </app-banco-preguntas>
+    
+          <div class="mb-3 mt-3">
+              <label>Número de Preguntas Seleccionadas (Manual)</label>
+              <input type="number" class="form-control" formControlName="numero_preguntas" readonly>
+          </div>
+        </div>
+        
+        <button type="submit" class="btn btn-primary mt-3 mb-5" [disabled]="examenForm.invalid">Crear Examen</button>
+      </form>
+    
+      <app-crear-pregunta-form
+        *ngIf="mostrarFormularioNuevaPregunta"
+        [idDocente]="idDocente"
+        [idTemaDefault]="temaSeleccionadoParaNuevaPregunta"
+        [temasDisponibles]="temas"
+        (preguntaCreada)="onPreguntaCreada($event)"
+        (cerrarForm)="mostrarFormularioNuevaPregunta = false">
+      </app-crear-pregunta-form>
+    </div> </div> </div> 

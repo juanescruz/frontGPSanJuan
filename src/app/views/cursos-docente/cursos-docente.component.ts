@@ -12,5 +12,5 @@ import { ListExamsComponent } from "../../components/list-exams/list-exams.compo
     imports: [LeftBarComponent, NavBarComponent, DescCursoComponent, ListExamsComponent]
 })
 export class CursosDocenteComponent {
-
+    
 }

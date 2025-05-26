@@ -16,6 +16,7 @@ import { MensajeDTO } from '../../dtos/GlobalDTO/MensajeDTO';
 })
 export class ListExamsComponent implements OnInit{
 
+
   items: ExamenDocenteDTO[] = [];
   isLoading: boolean = true;
   errorAlCargar: string | null = null;
@@ -28,6 +29,9 @@ export class ListExamsComponent implements OnInit{
 
   ngOnInit(): void {
     this.cargarExamenes();
+  }
+  crearExamen() {
+    this.router.navigate(['/crear-examen']);
   }
   cargarExamenes() {
     this.isLoading = true;

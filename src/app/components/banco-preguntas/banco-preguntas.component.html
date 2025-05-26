@@ -1,0 +1,27 @@
+<div class="banco-preguntas-container">
+  <input type="text" class="form-control mb-2" placeholder="Buscar pregunta en el banco..." (input)="filtrarPreguntas($event)">
+
+  <div *ngIf="isLoading" class="text-center">Cargando preguntas...</div>
+  
+  <div *ngIf="!isLoading && bancoPreguntasFiltrado.length === 0 && idTema !== null" class="alert alert-info">
+    No hay preguntas en el banco para el tema seleccionado o que coincidan con la búsqueda.
+  </div>
+  <div *ngIf="!isLoading && idTema === null" class="alert alert-warning">
+    Seleccione un tema para ver el banco de preguntas.
+  </div>
+
+  <div *ngIf="!isLoading && bancoPreguntasFiltrado.length > 0" class="list-group" style="max-height: 300px; overflow-y: auto;">
+    <label *ngFor="let pregunta of bancoPreguntasFiltrado" class="list-group-item d-flex justify-content-between align-items-center">
+      <div>
+        <input 
+          class="form-check-input me-2" 
+          type="checkbox"
+          [checked]="pregunta.seleccionada"
+          (change)="toggleSeleccionPregunta(pregunta)">
+        <small>ID: {{pregunta.id_pregunta}}</small> - {{ pregunta.enunciado }}
+        <br>
+        <small class="text-muted">Tipo: {{pregunta.tipo}} | Pública: {{pregunta.es_publica}}</small>
+      </div>
+    </label>
+  </div>
+</div>

@@ -24,7 +24,7 @@ export class CourseComponent {
 
   loadCourse(){
     this.courseService.setCourse(this.course);
-    
+    console.log("Curso seleccionado: ", this.course.id_grupo);
     if(this.userActivoService.getRol() == 'estudiante'){
       this.router.navigate(['/exams']);
     }else if(this.userActivoService.getRol() == 'docente'){

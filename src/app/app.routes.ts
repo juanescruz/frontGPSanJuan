@@ -14,7 +14,7 @@ import { HomeDocenteComponent } from './views/home-docente/home-docente.componen
 import { CursosDocenteComponent } from './views/cursos-docente/cursos-docente.component';
 import { ListaEstudiantesComponent } from './views/lista-estudiantes/lista-estudiantes.component';
 import { TestComponent } from './views/test/test.component';
-
+import { CrearExamenComponent } from './views/crear-examen/crear-examen.component';
 export const routes: Routes = [
   { path: 'sign-in', component: SignInComponent },
   { path: 'default-view', component: DefaultViewComponent },
@@ -25,7 +25,7 @@ export const routes: Routes = [
   { path: 'info-curso', component: InformacionCursoComponent },
   { path: 'syllabus/:course', component: SyllabusComponent },
   { path: 'exam/:id', component: ExamComponent },
-
+  { path: 'crear-examen', component: CrearExamenComponent },
   { path: 'agregar-pregunta', component: AgregarPreguntaComponent },
   { path: 'home-docente', component: HomeDocenteComponent },
   { path: 'curso-docente', component: CursosDocenteComponent },
